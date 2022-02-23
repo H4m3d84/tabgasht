@@ -1,0 +1,40 @@
+.header {
+  background-image: linear-gradient(
+      to left bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url("/imgs/hero.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 10rem;
+  }
+
+  &__textbox {
+    @include absCenter;
+  }
+
+  &__text {
+    color: $color-white;
+
+    &--main {
+      font-size: 12rem;
+      display: block;
+    }
+    &--sub {
+      display: block;
+      margin-top: 8rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+}

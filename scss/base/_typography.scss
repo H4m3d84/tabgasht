@@ -1,0 +1,18 @@
+@font-face {
+  font-family: vazir;
+  src: url("/fonts/Vazir-light.eot");
+  src: url("/fonts/Vazir-light.eot?#iefix")
+      format("/fonts/Vazir-light-opentype"),
+    url("/fonts/Vazir-light.woff") format("woff"),
+    url("/fonts/Vazir-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "vazir";
+  font-weight: 400;
+  line-height: 1.7rem;
+  letter-spacing: 1;
+  color: $color-grey-dark;
+}
