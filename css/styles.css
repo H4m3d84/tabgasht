@@ -216,6 +216,27 @@ body {
   transform: scale(0.95);
 }
 
+.featurebox {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3.2rem 2.4rem;
+  transition: all 0.3s;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.4);
+}
+.featurebox:hover {
+  transform: scale(1.05) translateY(-2.4rem);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.4);
+}
+.featurebox__icon {
+  font-size: 6.4rem;
+  background-image: linear-gradient(to left, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding: 1.2rem;
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 3.2rem;
+}
+
 .header {
   background-image: linear-gradient(to left bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("/imgs/hero.jpg");
   background-position: top;
@@ -257,13 +278,29 @@ body {
 }
 
 .about {
-  padding: 9.6rem 0;
+  padding: 20rem 0;
 }
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 12.8rem;
   row-gap: 4.8rem;
+}
+
+.features {
+  padding: 25rem 0;
+  background-image: linear-gradient(to left bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("/imgs/nat-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: skewY(-5deg);
+}
+.features__container {
+  display: flex;
+  justify-content: space-arount;
+  gap: 5rem;
+}
+.features > * {
+  transform: skewY(5deg);
 }
 
 /*# sourceMappingURL=styles.css.map */
