@@ -43,7 +43,7 @@
 
   &--white {
     background-color: $color-white;
-    color: $color-grey-dark;
+    color: $color-grey-dark-3;
     font-weight: 400;
     border-radius: 6.4rem;
     padding: 1.6rem 2.4rem;
@@ -51,6 +51,21 @@
     &:hover {
       &::after {
         background-color: $color-white;
+        border-radius: 4.8rem;
+      }
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 400;
+    border-radius: 6.4rem;
+    padding: 1.6rem 2.4rem;
+
+    &:hover {
+      &::after {
+        background-color: $color-primary;
         border-radius: 4.8rem;
       }
     }

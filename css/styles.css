@@ -42,12 +42,40 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: vazir;
+  src: url("/fonts/Vazir-light-FD.eot");
+  src: url("/fonts/Vazir-light-FD.eot?#iefix") format("/fonts/Vazir-light-FD-opentype"), url("/fonts/Vazir-light-FD.woff") format("woff"), url("/fonts/Vazir-light-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: vazir-bold;
+  src: url("/fonts/Vazir-Bold-FD.eot");
+  src: url("/fonts/Vazir-Bold-FD.eot?#iefix") format("/fonts/Vazir-Bold-FD-opentype"), url("/fonts/Vazir-Bold-FD.woff") format("woff"), url("/fonts/Vazir-Bold-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: vazir-medium;
+  src: url("/fonts/Vazir-Medium-FD.eot");
+  src: url("/fonts/Vazir-Medium-FD.eot?#iefix") format("/fonts/Vazir-Medium-FD-opentype"), url("/fonts/Vazir-Medium-FD.woff") format("woff"), url("/fonts/Vazir-Medium-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: vazir-thin;
+  src: url("/fonts/Vazir-Thin-FD.eot");
+  src: url("/fonts/Vazir-Thin-FD.eot?#iefix") format("/fonts/Vazir-Thin-FD-opentype"), url("/fonts/Vazir-Thin-FD.woff") format("woff"), url("/fonts/Vazir-Thin-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "vazir";
   font-weight: 400;
   line-height: 1.7rem;
   letter-spacing: 1;
-  color: #777;
+  color: #333;
   background-color: #fff;
   padding: 3.2rem;
 }
@@ -124,7 +152,7 @@ body {
 }
 
 .container {
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -162,13 +190,24 @@ body {
 }
 .btn--white {
   background-color: #fff;
-  color: #777;
+  color: #333;
   font-weight: 400;
   border-radius: 6.4rem;
   padding: 1.6rem 2.4rem;
 }
 .btn--white:hover::after {
   background-color: #fff;
+  border-radius: 4.8rem;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 6.4rem;
+  padding: 1.6rem 2.4rem;
+}
+.btn--green:hover::after {
+  background-color: #55c57a;
   border-radius: 4.8rem;
 }
 .btn--text {
@@ -180,6 +219,108 @@ body {
 .btn--text:hover {
   background-color: #55c57a;
   color: #fff;
+}
+
+.card {
+  perspective: 180rem;
+}
+.card__image {
+  width: 100%;
+  height: 25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card__image--1 {
+  background-image: linear-gradient(rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url("/imgs/nat-5.jpg");
+}
+.card__image--2 {
+  background-image: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/imgs/nat-6.jpg");
+}
+.card__image--3 {
+  background-image: linear-gradient(rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)), url("/imgs/nat-7.jpg");
+}
+.card__heading {
+  position: absolute;
+  top: 17rem;
+  right: 0;
+  z-index: 1;
+  font-size: 3.2rem;
+  color: #fff;
+  padding: 2.4rem 1.2rem;
+}
+.card__heading--1 {
+  background-image: linear-gradient(rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+}
+.card__heading--2 {
+  background-image: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+}
+.card__heading--3 {
+  background-image: linear-gradient(rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+}
+.card__list {
+  list-style: none;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 2.4rem;
+  margin-top: 3.2rem;
+}
+.card__item:not(:last-child) {
+  padding-bottom: 2.4rem;
+  margin-bottom: 2.4rem;
+  border-bottom: 1px solid #eee;
+}
+.card__item:last-child {
+  margin-bottom: 2.4rem;
+}
+.card__side {
+  transition: all 0.8s;
+  backface-visibility: hidden;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+}
+.card__front {
+  width: 100%;
+  position: relative;
+}
+.card__back {
+  width: 100%;
+  height: 100%;
+  background-color: lightcyan;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__back--1 {
+  background-image: linear-gradient(to left bottom, #ffb900, #ff7730);
+}
+.card__back--2 {
+  background-image: linear-gradient(to left bottom, #7ed56f, #28b485);
+}
+.card__back--3 {
+  background-image: linear-gradient(to left bottom, #2998ff, #5643fa);
+}
+.card__back__only {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+.card__back__price {
+  font-size: 4.8rem;
+  margin-bottom: 12.8rem;
+}
+.card:hover .card__front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__back {
+  transform: rotateY(0deg);
 }
 
 .composition {
@@ -220,7 +361,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 3.2rem 2.4rem;
   transition: all 0.3s;
-  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0);
 }
 .featurebox:hover {
   transform: scale(1.05) translateY(-2.4rem);
@@ -301,6 +442,20 @@ body {
 }
 .features > * {
   transform: skewY(5deg);
+}
+
+.tours {
+  padding: 15rem 0;
+}
+.tours__cardcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6.4rem;
+}
+.tours__btn {
+  grid-column: 2/3;
+  justify-self: center;
+  margin-top: 3.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

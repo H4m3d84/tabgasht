@@ -37,3 +37,19 @@
     transform: skewY(5deg);
   }
 }
+
+.tours {
+  padding: 15rem 0;
+
+  &__cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6.4rem;
+  }
+
+  &__btn {
+    grid-column: 2 / 3;
+    justify-self: center;
+    margin-top: 3.2rem;
+  }
+}

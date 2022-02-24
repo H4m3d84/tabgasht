@@ -39,3 +39,47 @@
   font-weight: normal;
   font-style: normal;
 }
+// ****************************************
+@font-face {
+  font-family: vazir;
+  src: url("/fonts/Vazir-light-FD.eot");
+  src: url("/fonts/Vazir-light-FD.eot?#iefix")
+      format("/fonts/Vazir-light-FD-opentype"),
+    url("/fonts/Vazir-light-FD.woff") format("woff"),
+    url("/fonts/Vazir-light-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: vazir-bold;
+  src: url("/fonts/Vazir-Bold-FD.eot");
+  src: url("/fonts/Vazir-Bold-FD.eot?#iefix")
+      format("/fonts/Vazir-Bold-FD-opentype"),
+    url("/fonts/Vazir-Bold-FD.woff") format("woff"),
+    url("/fonts/Vazir-Bold-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: vazir-medium;
+  src: url("/fonts/Vazir-Medium-FD.eot");
+  src: url("/fonts/Vazir-Medium-FD.eot?#iefix")
+      format("/fonts/Vazir-Medium-FD-opentype"),
+    url("/fonts/Vazir-Medium-FD.woff") format("woff"),
+    url("/fonts/Vazir-Medium-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: vazir-thin;
+  src: url("/fonts/Vazir-Thin-FD.eot");
+  src: url("/fonts/Vazir-Thin-FD.eot?#iefix")
+      format("/fonts/Vazir-Thin-FD-opentype"),
+    url("/fonts/Vazir-Thin-FD.woff") format("woff"),
+    url("/fonts/Vazir-Thin-FD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
