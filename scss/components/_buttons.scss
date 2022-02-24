@@ -2,14 +2,11 @@
   &,
   &:link,
   &:visited {
+    font-family: vazir-thin;
+    font-weight: 100;
+    font-size: 2rem;
     display: inline-block;
     text-decoration: none;
-    padding: 1.6rem 2.4rem;
-    color: $color-grey-dark;
-    font-size: 2rem;
-    font-weight: 400;
-    border-radius: 6.4rem;
-    font-family: vazir;
     transition: all 0.2s;
     position: relative;
   }
@@ -31,20 +28,43 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: $color-white;
-    border-radius: 4.8rem;
+    border-radius: 6.4rem;
+
     z-index: -1;
-    transition: all 0.2s;
+    transition: all 0.3s;
   }
 
   &:hover {
     &::after {
-      transform: scaleX(1.2) scaleY(2);
+      transform: scaleX(1.5) scaleY(2);
       opacity: 0;
     }
   }
 
   &--white {
     background-color: $color-white;
+    color: $color-grey-dark;
+    font-weight: 400;
+    border-radius: 6.4rem;
+    padding: 1.6rem 2.4rem;
+
+    &:hover {
+      &::after {
+        background-color: $color-white;
+        border-radius: 4.8rem;
+      }
+    }
+  }
+
+  &--text {
+    justify-self: start;
+    color: $color-primary-dark;
+    padding: 1rem 0.4rem;
+    border-bottom: 1px solid $color-primary-dark;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
   }
 }
