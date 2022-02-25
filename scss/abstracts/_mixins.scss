@@ -4,3 +4,12 @@
   right: 50%;
   transform: translate(50%, -50%);
 }
+
+@mixin clearfix {
+  &::after,
+  &::before {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}

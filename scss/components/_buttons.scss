@@ -2,7 +2,6 @@
   &,
   &:link,
   &:visited {
-    font-family: vazir-thin;
     font-weight: 100;
     font-size: 2rem;
     display: inline-block;
@@ -42,6 +41,8 @@
   }
 
   &--white {
+    font-family: vazir-thin;
+
     background-color: $color-white;
     color: $color-grey-dark-3;
     font-weight: 400;
@@ -62,6 +63,7 @@
     font-weight: 400;
     border-radius: 6.4rem;
     padding: 1.6rem 2.4rem;
+    font-family: vazir-thin;
 
     &:hover {
       &::after {
@@ -76,6 +78,7 @@
     color: $color-primary-dark;
     padding: 1rem 0.4rem;
     border-bottom: 1px solid $color-primary-dark;
+    font-family: vazir-medium;
 
     &:hover {
       background-color: $color-primary;

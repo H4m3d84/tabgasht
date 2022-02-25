@@ -156,8 +156,22 @@ body {
   margin: 0 auto;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.15;
+}
+.bg-video__vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .btn, .btn:link, .btn:visited {
-  font-family: vazir-thin;
   font-weight: 100;
   font-size: 2rem;
   display: inline-block;
@@ -189,6 +203,7 @@ body {
   opacity: 0;
 }
 .btn--white {
+  font-family: vazir-thin;
   background-color: #fff;
   color: #333;
   font-weight: 400;
@@ -205,6 +220,7 @@ body {
   font-weight: 400;
   border-radius: 6.4rem;
   padding: 1.6rem 2.4rem;
+  font-family: vazir-thin;
 }
 .btn--green:hover::after {
   background-color: #55c57a;
@@ -215,6 +231,7 @@ body {
   color: #28b485;
   padding: 1rem 0.4rem;
   border-bottom: 1px solid #28b485;
+  font-family: vazir-medium;
 }
 .btn--text:hover {
   background-color: #55c57a;
@@ -378,6 +395,68 @@ body {
   margin-bottom: 3.2rem;
 }
 
+.story {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: skewX(-12deg);
+  padding: 4.8rem;
+  width: 100rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+}
+.story::after, .story::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+.story > * {
+  transform: skewX(12deg);
+}
+.story__imgbox {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  float: right;
+  margin-left: 2.4rem;
+  position: relative;
+}
+.story__img {
+  height: 20rem;
+  transform: scale(1.4);
+  transition: all 0.4s;
+}
+.story__heading {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.story__detail {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+.story:hover .story__figure .story__imgbox .story__img {
+  transform: scale(1);
+  filter: blur(4px) brightness(80%);
+}
+.story:hover .story__figure .story__imgbox .story__name {
+  transform: translateY(0);
+  opacity: 1;
+}
+.story__name {
+  position: absolute;
+  color: #fff;
+  font-size: 2.4rem;
+  transform: translateY(4.8rem);
+  opacity: 0;
+  transition: all 0.4s;
+}
+.story__btn {
+  align-self: center;
+}
+
 .header {
   background-image: linear-gradient(to left bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("/imgs/hero.jpg");
   background-position: top;
@@ -456,6 +535,14 @@ body {
   grid-column: 2/3;
   justify-self: center;
   margin-top: 3.2rem;
+}
+
+.stories {
+  padding: 15rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  position: relative;
 }
 
 /*# sourceMappingURL=styles.css.map */
