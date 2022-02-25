@@ -61,3 +61,36 @@
   gap: 8rem;
   position: relative;
 }
+
+.book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to bottom left,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  // rgba($color-white, 0.7)
+  &__container {
+    background-image: linear-gradient(
+        75deg,
+        transparent 0%,
+        transparent 50%,
+        rgba($color-white, 0.85) 50%
+      ),
+      url(/imgs/nat-10.jpg);
+
+    background-size: cover;
+    margin: 0 auto;
+    // height: 60rem;
+
+    &__right {
+      width: 50%;
+      padding: 4.8rem;
+    }
+  }
+
+  &__heading {
+    padding: 4.8rem 0;
+  }
+}

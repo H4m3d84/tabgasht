@@ -162,6 +162,7 @@ body {
   right: 0;
   z-index: -1;
   height: 100%;
+  width: 100%;
   overflow: hidden;
   opacity: 0.15;
 }
@@ -178,6 +179,7 @@ body {
   text-decoration: none;
   transition: all 0.2s;
   position: relative;
+  border: none;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -395,6 +397,73 @@ body {
   margin-bottom: 3.2rem;
 }
 
+.form__item {
+  font-size: 1.6rem;
+  position: relative;
+}
+.form__item__input {
+  display: block;
+  width: 90%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  font-family: vazir-thin;
+  margin-bottom: 0.8rem;
+  outline: none;
+  border: none;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+.form__item__input__label {
+  position: absolute;
+  top: 6.4rem;
+  right: 1.2rem;
+  transition: all 0.4s;
+}
+.form__item__input::placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+.form__item__input:focus {
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+}
+.form__item__input:focus:valid {
+  border-bottom: 3px solid #55c57a;
+}
+.form__item__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+.form__item__input:placeholder-shown + .form__item__input__label {
+  top: 1.8rem;
+}
+.form__item__input--email {
+  direction: ltr;
+}
+.form__item__radio {
+  display: none;
+}
+.form__item__radio__label:not(:last-child) {
+  margin-left: 4.8rem;
+}
+.form__item__radio__label::before {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  outline: 5px solid #28b485;
+  outline-offset: 0.4rem;
+  border-radius: 50%;
+  margin-left: 2rem;
+  transform: translateY(0.4rem);
+  transition: all 0.2s;
+}
+.form__item__radio:checked + .form__item__radio__label::before {
+  background-color: #28b485;
+}
+.form__btn {
+  padding: 0.8rem 1.6rem;
+  margin-right: -1rem;
+}
+
 .story {
   background-color: rgba(255, 255, 255, 0.6);
   transform: skewX(-12deg);
@@ -543,6 +612,23 @@ body {
   flex-direction: column;
   gap: 8rem;
   position: relative;
+}
+
+.book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to bottom left, #7ed56f, #28b485);
+}
+.book__container {
+  background-image: linear-gradient(75deg, transparent 0%, transparent 50%, rgba(255, 255, 255, 0.85) 50%), url(/imgs/nat-10.jpg);
+  background-size: cover;
+  margin: 0 auto;
+}
+.book__container__right {
+  width: 50%;
+  padding: 4.8rem;
+}
+.book__heading {
+  padding: 4.8rem 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
