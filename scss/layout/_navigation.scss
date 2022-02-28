@@ -1,0 +1,119 @@
+.navigation {
+  &__checkbox {
+    display: none;
+
+    &:checked {
+      & + .navigation__label {
+        & > .navigation__background {
+          transform: scale(40);
+        }
+      }
+    }
+
+    &:checked {
+      & ~ .nav {
+        right: 50%;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+
+    &:checked {
+      & + .navigation__label {
+        & > .navigation__navigationbox {
+          & > .navigation__shapes {
+            visibility: hidden;
+
+            &::after,
+            &::before {
+              visibility: visible;
+              top: 0;
+            }
+            &::after {
+              transform: rotate(135deg);
+            }
+
+            &::before {
+              transform: rotate(-135deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__label {
+    position: fixed;
+    top: 7rem;
+    left: 7rem;
+    z-index: 1;
+  }
+  &__navigationbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: $color-white;
+
+    &:hover {
+      & > .navigation__shapes {
+        &::after {
+          top: 1.2rem;
+        }
+
+        &::before {
+          top: -1.2rem;
+        }
+      }
+    }
+  }
+
+  &__background {
+    content: "";
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.95, 0.29, 1, 1.12);
+
+    z-index: 0;
+  }
+
+  &__shapes {
+    width: 4rem;
+    height: 0.2rem;
+    background-color: $color-grey-dark-3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 4rem;
+      height: 0.2rem;
+      background-color: $color-grey-dark-3;
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::after {
+      top: 1rem;
+    }
+    &::before {
+      top: -1rem;
+    }
+  }
+}
