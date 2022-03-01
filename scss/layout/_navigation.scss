@@ -5,7 +5,7 @@
     &:checked {
       & + .navigation__label {
         & > .navigation__background {
-          transform: scale(40);
+          transform: scale(100);
         }
       }
     }
@@ -80,12 +80,11 @@
       $color-primary-dark
     );
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0.35rem;
+    left: 0.35rem;
     z-index: -1;
     transition: transform 0.4s;
     transition-timing-function: cubic-bezier(0.95, 0.29, 1, 1.12);
-
     z-index: 0;
   }
 
