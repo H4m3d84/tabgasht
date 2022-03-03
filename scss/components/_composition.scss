@@ -1,6 +1,13 @@
 .composition {
   position: relative;
 
+  @include respond(tab-port) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6.4rem 0;
+  }
+
   &__image {
     width: 60%;
     position: absolute;
@@ -8,9 +15,19 @@
     transition: all 0.2s;
     box-shadow: 0 2.4rem 4.8rem rgba($color-black, $alpha: 0.4);
 
+    @include respond(tab-port) {
+      width: 30%;
+      position: relative;
+    }
+
     &:hover {
       transform: translateY(-1rem) scale(1.05);
       z-index: 1;
+
+      @include respond(tab-port) {
+        transform: translateY(-1rem) scale(1.2);
+        z-index: 2;
+      }
 
       outline-offset: 1.6rem;
       outline: 1.6rem solid $color-primary-dark;
@@ -21,17 +38,38 @@
   &__image--1 {
     top: 0;
     left: 0;
+
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 0;
+    }
   }
   &__image--2 {
     top: 4rem;
     right: -4rem;
+
+    @include respond(tab-port) {
+      top: -2rem;
+      right: 0;
+      transform: scale(1.2);
+      z-index: 1;
+    }
   }
   &__image--3 {
     top: 12rem;
     right: 10rem;
+
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 0;
+    }
   }
 
   &:hover .composition__image:not(:hover) {
     transform: scale(0.95);
+
+    @include respond(tab-port) {
+      transform: scale(1);
+    }
   }
 }
