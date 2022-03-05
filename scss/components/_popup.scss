@@ -28,22 +28,35 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    gap: 2.4rem;
+    justify-items: center;
+
+    @include respond(tab-land) {
+      grid-template-columns: 1fr;
+    }
 
     transition: all 0.4s 0.3s;
   }
   &__imagebox {
-    width: 33%;
+    @include respond(tab-land) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(phone) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
 
     &__img {
+      height: 100%;
       width: 100%;
       display: block;
     }
   }
   &__textbox {
-    width: 67%;
     padding: 2.4rem;
   }
   &__paragraph {
@@ -53,6 +66,12 @@
     column-gap: 3.2rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+    @include respond(tab-land) {
+      column-count: 1;
+      column-gap: 0;
+      column-rule: none;
+    }
   }
 
   &__close {

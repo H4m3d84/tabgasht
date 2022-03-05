@@ -20,6 +20,10 @@
       grid-row: 1/2;
       width: 20%;
     }
+
+    @include respond(phone) {
+      width: 30%;
+    }
   }
 
   &__logo {

@@ -87,19 +87,25 @@
           <div class="about__imagebox">
             <div class="composition">
               <img
-                src="./imgs/nat-1-large.jpg"
+                srcset="./imgs/nat-1.jpg 300w, ./imgs/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 30vw, 300px"
                 alt="image of nature"
                 class="composition__image composition__image--1"
+                src="./imgs/nat-1-large.jpg"
               />
               <img
-                src="./imgs/nat-2-large.jpg"
+                srcset="./imgs/nat-2.jpg 300w, ./imgs/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 30vw"
                 alt="image of nature"
                 class="composition__image composition__image--2"
+                src="./imgs/nat-2-large.jpg"
               />
               <img
-                src="./imgs/nat-3-large.jpg"
+                srcset="./imgs/nat-3.jpg 300w, ./imgs/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 30vw, (max-width: 37.5em) 30vw"
                 alt="image of nature"
                 class="composition__image composition__image--3"
+                src="./imgs/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -237,6 +243,8 @@
           <figure class="story__figure">
             <div class="story__imgbox">
               <img
+                srcset="./imgs/nat-8-1000w.jpg 1000w, ./imgs/nat-8.jpg 2000w"
+                sizes="(max-width: 75em) 30vw, (max-width: 56.25em) 36vw, (max-width: 37.5em) 49vw, 420px"
                 src="./imgs/nat-8.jpg"
                 alt="an girl in nature"
                 class="story__img"
@@ -263,6 +271,8 @@
           <figure class="story__figure">
             <div class="story__imgbox">
               <img
+                srcset="./imgs/nat-9-1000w.jpg 1000w, ./imgs/nat-9.jpg 2000w"
+                sizes="(max-width: 75em) 30vw, (max-width: 56.25em) 36vw, (max-width: 37.5em) 49vw, 420px"
                 src="./imgs/nat-9.jpg"
                 alt="an girl in nature"
                 class="story__img"
@@ -350,11 +360,21 @@
     </main>
     <footer class="footer">
       <div class="footer__logobox">
-        <img
-          src="./imgs/logo-green-2x.png"
-          alt="website logo"
-          class="footer__logo"
-        />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              imgs/logo-green-small-1x.png 1x,
+              imgs/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="./imgs/logo-green-1x.png 1x, ./imgs/logo-green-2x.png 2x"
+            alt="website logo"
+            class="footer__logo"
+            src="./imgs/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="footer__left">
         <ul class="footer__list">
@@ -383,46 +403,21 @@
         </p>
       </div>
     </footer>
-    <!-- <div class="popup container">
-      <div class="popup__imagebox popup__imagebox--1">
-        <img src="./imgs/nat-8.jpg" alt="" class="popup__img" />
-      </div>
-      <div class="popup__imagebox popup__imagebox--2">
-        <img src="./imgs/nat-9.jpg" alt="" class="popup__img" />
-      </div>
-      <div class="popup__textbox">
-        <h2 class="heading-secondary u-margin-bottom-sm">ثبت نام کنید</h2>
-        <h3 class="heading-tertiary u-margin-bottom-sm">
-          مهم - لطفا قوانین را قبل از ثبت نام مطالعه فرمایید
-        </h3>
-        <p class="popup__paragraph">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
-          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
-          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
-          طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-          الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-          صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
-          شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
-          اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-          قرار گیرد.
-        </p>
-      </div>
-      <a href="#" class="btn btn--green popup__btn">ثبت نام</a>
-    </div> -->
-
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__imagebox">
           <img
+            srcset="./imgs/nat-8-1000w.jpg 1000w, ./imgs/nat-8.jpg 2000w"
+            sizes="(max-width:600px) 80vw, (max-width:900px) 40vw, (max-width:1200px) 40vw,   480px"
             src="./imgs/nat-8.jpg"
             alt="a girl on lake"
             class="popup__imagebox__img"
           />
           <img
+            srcset="./imgs/nat-9-1000w.jpg 1000w, ./imgs/nat-9.jpg 2000w"
+            alt="a girl on lake"
+            sizes="(max-width:600px) 80vw, (max-width:900px) 40vw,(max-width:1200px) 40vw,  480px"
             src="./imgs/nat-9.jpg"
-            alt="a boy in nature"
             class="popup__imagebox__img"
           />
         </div>
