@@ -34,9 +34,18 @@
       rgba($color-primary-light, 0.7),
       rgba($color-primary-dark, 0.7)
     ),
-    url("/imgs/nat-4.jpg");
+    url("/imgs/nat-4-small.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to left bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      ),
+      url("/imgs/nat-4.jpg");
+  }
 
   @include respond(tab-land) {
     padding: 15rem 0;

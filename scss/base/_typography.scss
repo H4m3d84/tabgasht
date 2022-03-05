@@ -15,17 +15,20 @@ body {
 
   display: inline-block;
   text-align: center;
-  color: transparent;
-
-  background-image: linear-gradient(
-    to left,
-    $color-primary-light,
-    $color-primary-dark
-  );
   display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
   transition: all 0.2s;
+  color: $color-primary-dark;
+
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    color: transparent;
+    background-image: linear-gradient(
+      to left,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 
   &:hover {
     transform: skewX(10deg) skewY(-2deg) scale(1.1);
