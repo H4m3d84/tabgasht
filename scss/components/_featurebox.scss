@@ -11,16 +11,19 @@
 
   &__icon {
     font-size: 6.4rem;
-    background-image: linear-gradient(
-      to left,
-      $color-primary-light,
-      $color-primary-dark
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: $color-primary-dark;
     padding: 1.2rem;
-    color: transparent;
     display: inline-block;
     margin-bottom: 3.2rem;
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      background-image: linear-gradient(
+        to left,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
   }
 }
